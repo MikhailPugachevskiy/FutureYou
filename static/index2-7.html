@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureYou | Profile Question 7</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles2.css" />
+</head>
+
+<body>
+
+    <!-- TOP NAV -->
+    <header class="top-nav">
+        <div class="logo-area">
+            <div class="logo-icon">✦</div>
+            <span class="logo-text">FutureYou</span>
+        </div>
+    </header>
+
+    <!-- PROGRESS -->
+    <section class="progress-section">
+        <div class="progress-info">
+            <span class="question-count">Question 7 of 7</span>
+            <span class="progress-percent">100%</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width:100%"></div>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="question-container">
+        <div class="question-inner">
+            <h1 class="question-title">What's your biggest career concern?</h1>
+            <p class="subtitle">Be honest — this helps us give better guidance.</p>
+
+            <textarea id="careerConcern" class="text-input" rows="5"
+                placeholder="e.g. I'm worried about being replaced by AI, I feel stuck in my current role, I don't know what I'm good at..."></textarea>
+        </div>
+    </main>
+
+    <!-- BOTTOM NAV -->
+    <footer class="bottom-nav">
+        <a class="btn-back" href="index2-6.html">← Back</a>
+
+        <button class="btn-continue" id="profileBtn">
+            See My Profile <span aria-hidden="true">→</span>
+        </button>
+    </footer>
+
+    <script src="app-state.js"></script>
+    <script src="api.js"></script>
+    <script>
+        document.getElementById("profileBtn").addEventListener("click", async () => {
+            const text = document.getElementById("careerConcern").value.trim();
+
+            if (!text) {
+                alert("Please write a short concern before continuing.");
+                return;
+            }
+
+            updateProfileField("careerConcern", text);
+
+            const result = await generateCareerPath();
+            console.log("Career path result:", JSON.stringify(result, null, 2));
+
+            window.location.href = "index3.html";
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f7f8fc;
+    color: #111827;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   TOP NAVIGATION
+========================= */
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    background: linear-gradient(135deg, #6c63ff, #8b84ff);
+    color: white;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.logo-text {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+/* =========================
+   PROGRESS SECTION
+========================= */
+
+.progress-section {
+    width: 60%;
+    margin: 10px auto 0 auto;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #e5e7eb;
+    border-radius: 10px;
+}
+
+.progress-fill {
+    width: 14%;
+    height: 100%;
+    background: linear-gradient(90deg, #6c63ff, #8b84ff);
+    border-radius: 10px;
+}
+
+
+/* =========================
+   MAIN QUESTION AREA
+========================= */
+
+.question-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.question-container h1 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   INPUT FIELD
+========================= */
+
+.input-group {
+    width: 520px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+.input-group input:focus {
+    border-color: #6c63ff;
+}
+
+
+/* =========================
+   BOTTOM NAVIGATION
+========================= */
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+
+/* BACK BUTTON */
+
+.btn-back {
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+
+/* CONTINUE BUTTON */
+
+.btn-continue {
+    background: linear-gradient(135deg, #6c63ff, #8b84ff);
+    border: none;
+    padding: 14px 30px;
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-continue:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(108, 99, 255, 0.25);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .progress-section {
+        width: 85%;
+    }
+
+    .input-group {
+        width: 90%;
+    }
+
+    .question-container h1 {
+        font-size: 28px;
+    }
+
+    .bottom-nav {
+        padding: 20px 30px;
+    }
+
+}

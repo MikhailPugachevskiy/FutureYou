@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureYou | Profile Question 4</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles2.css" />
+</head>
+
+<body>
+
+    <!-- TOP NAV -->
+    <header class="top-nav">
+        <div class="logo-area">
+            <div class="logo-icon">✦</div>
+            <span class="logo-text">FutureYou</span>
+        </div>
+    </header>
+
+    <!-- PROGRESS -->
+    <section class="progress-section">
+        <div class="progress-info">
+            <span class="question-count">Question 4 of 7</span>
+            <span class="progress-percent">57%</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width:57%"></div>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="question-container">
+        <div class="question-inner">
+            <h1 class="question-title">What tasks drain you?</h1>
+            <p class="subtitle">Select the ones that feel like a chore.</p>
+
+            <div class="pill-grid" id="pillGrid">
+                <div class="pill"><span class="pill-ico">📄</span>Admin &amp; Paperwork</div>
+                <div class="pill"><span class="pill-ico">📞</span>Cold Calling</div>
+                <div class="pill"><span class="pill-ico">🔁</span>Repetitive Tasks</div>
+                <div class="pill"><span class="pill-ico">🏛️</span>Office Politics</div>
+                <div class="pill"><span class="pill-ico">🔍</span>Being Micromanaged</div>
+                <div class="pill"><span class="pill-ico">🎤</span>Public Speaking</div>
+                <div class="pill"><span class="pill-ico">⚡</span>Conflict Resolution</div>
+                <div class="pill"><span class="pill-ico">🤝</span>Networking Events</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- BOTTOM NAV -->
+    <footer class="bottom-nav">
+        <a class="btn-back" href="index2-3.html">← Back</a>
+
+        <button class="btn-continue" id="continueBtn">
+            Continue <span aria-hidden="true">→</span>
+        </button>
+    </footer>
+
+    <script src="app-state.js"></script>
+    <script>
+        // Multi select pills
+        const pills = document.querySelectorAll(".pill");
+        pills.forEach(p => p.addEventListener("click", () => p.classList.toggle("selected")));
+
+        // Continue validation + save
+        document.getElementById("continueBtn").addEventListener("click", () => {
+            const selected = Array.from(document.querySelectorAll(".pill.selected"))
+                .map(p => p.textContent.trim());
+
+            if (selected.length === 0) {
+                alert("Please select at least one option.");
+                return;
+            }
+
+            updateProfileField("drainTasks", selected);
+            window.location.href = "index2-5.html";
+        });
+    </script>
+
+</body>
+
+</html>

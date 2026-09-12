@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureYou | Profile Question 6</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles2.css" />
+</head>
+
+<body>
+
+    <!-- TOP NAV -->
+    <header class="top-nav">
+        <div class="logo-area">
+            <div class="logo-icon">✦</div>
+            <span class="logo-text">FutureYou</span>
+        </div>
+    </header>
+
+    <!-- PROGRESS -->
+    <section class="progress-section">
+        <div class="progress-info">
+            <span class="question-count">Question 6 of 7</span>
+            <span class="progress-percent">86%</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width:86%"></div>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="question-container">
+        <div class="question-inner">
+            <h1 class="question-title">What's your ideal work style?</h1>
+            <p class="subtitle">How do you do your best work?</p>
+
+            <div class="options-grid">
+
+                <label class="option-card">
+                    <input type="radio" name="workStyle" value="Fully Remote" />
+                    <div class="option-content">
+                        <div class="option-icon">🏡</div>
+                        <div class="option-text">
+                            <h3>Fully Remote</h3>
+                            <p>Work from anywhere</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="option-card">
+                    <input type="radio" name="workStyle" value="Hybrid" />
+                    <div class="option-content">
+                        <div class="option-icon">🔀</div>
+                        <div class="option-text">
+                            <h3>Hybrid</h3>
+                            <p>Mix of office and remote</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="option-card">
+                    <input type="radio" name="workStyle" value="On-Site" />
+                    <div class="option-content">
+                        <div class="option-icon">🏢</div>
+                        <div class="option-text">
+                            <h3>On-Site</h3>
+                            <p>In the office daily</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="option-card">
+                    <input type="radio" name="workStyle" value="Team-Oriented" />
+                    <div class="option-content">
+                        <div class="option-icon">👥</div>
+                        <div class="option-text">
+                            <h3>Team-Oriented</h3>
+                            <p>Collaborative environments</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="option-card">
+                    <input type="radio" name="workStyle" value="Independent" />
+                    <div class="option-content">
+                        <div class="option-icon">🎯</div>
+                        <div class="option-text">
+                            <h3>Independent</h3>
+                            <p>Self-directed work</p>
+                        </div>
+                    </div>
+                </label>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- BOTTOM NAV -->
+    <footer class="bottom-nav">
+        <a class="btn-back" href="index2-5.html">← Back</a>
+
+        <button class="btn-continue" id="continueBtn">
+            Continue <span aria-hidden="true">→</span>
+        </button>
+    </footer>
+
+    <script src="app-state.js"></script>
+    <script>
+        document.getElementById("continueBtn").addEventListener("click", () => {
+            const selected = document.querySelector('input[name="workStyle"]:checked');
+            if (!selected) {
+                alert("Please select one option.");
+                return;
+            }
+
+            updateProfileField("workStyle", selected.value);
+            window.location.href = "index2-7.html";
+        });
+    </script>
+
+</body>
+
+</html>

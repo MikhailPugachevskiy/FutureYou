@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureYou | Profile Question 5</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles2.css" />
+</head>
+
+<body>
+
+    <!-- TOP NAV -->
+    <header class="top-nav">
+        <div class="logo-area">
+            <div class="logo-icon">✦</div>
+            <span class="logo-text">FutureYou</span>
+        </div>
+    </header>
+
+    <!-- PROGRESS -->
+    <section class="progress-section">
+        <div class="progress-info">
+            <span class="question-count">Question 5 of 7</span>
+            <span class="progress-percent">71%</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width:71%"></div>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="question-container">
+        <div class="question-inner">
+            <h1 class="question-title">What drives you most?</h1>
+            <p class="subtitle">Pick your primary career motivation.</p>
+
+            <div class="options-grid">
+
+                <label class="option-card">
+                    <input type="radio" name="motivation" value="Stability & Security" />
+                    <div class="option-content">
+                        <div class="option-icon">🛡️</div>
+                        <div class="option-text">
+                            <h3>Stability &amp; Security</h3>
+                            <p>Reliable income and job security</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="option-card">
+                    <input type="radio" name="motivation" value="Growth & Learning" />
+                    <div class="option-content">
+                        <div class="option-icon">🚀</div>
+                        <div class="option-text">
+                            <h3>Growth &amp; Learning</h3>
+                            <p>Constant learning and advancement</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="option-card">
+                    <input type="radio" name="motivation" value="Impact & Purpose" />
+                    <div class="option-content">
+                        <div class="option-icon">🌍</div>
+                        <div class="option-text">
+                            <h3>Impact &amp; Purpose</h3>
+                            <p>Making a meaningful difference</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="option-card">
+                    <input type="radio" name="motivation" value="Flexibility & Freedom" />
+                    <div class="option-content">
+                        <div class="option-icon">🕊️</div>
+                        <div class="option-text">
+                            <h3>Flexibility &amp; Freedom</h3>
+                            <p>Control over time and location</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="option-card">
+                    <input type="radio" name="motivation" value="High Income" />
+                    <div class="option-content">
+                        <div class="option-icon">💰</div>
+                        <div class="option-text">
+                            <h3>High Income</h3>
+                            <p>Maximizing earning potential</p>
+                        </div>
+                    </div>
+                </label>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- BOTTOM NAV -->
+    <footer class="bottom-nav">
+        <a class="btn-back" href="index2-4.html">← Back</a>
+
+        <button class="btn-continue" id="continueBtn">
+            Continue <span aria-hidden="true">→</span>
+        </button>
+    </footer>
+
+    <script src="app-state.js"></script>
+    <script>
+        document.getElementById("continueBtn").addEventListener("click", () => {
+            const selected = document.querySelector('input[name="motivation"]:checked');
+            if (!selected) {
+                alert("Please select one option.");
+                return;
+            }
+
+            updateProfileField("motivation", selected.value);
+            window.location.href = "index2-6.html";
+        });
+    </script>
+
+</body>
+
+</html>
