@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureYou | Profile Question 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css" />
+</head>
+
+<body>
+
+    <!-- TOP NAV -->
+    <header class="top-nav">
+        <div class="logo-area">
+            <div class="logo-icon">✦</div>
+            <span class="logo-text">FutureYou</span>
+        </div>
+    </header>
+
+    <!-- PROGRESS -->
+    <section class="progress-section">
+        <div class="progress-info">
+            <span class="question-count">Question 2 of 7</span>
+            <span class="progress-percent">29%</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width:29%"></div>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="question-container">
+        <div class="question-inner">
+            <h1 class="question-title">What's your experience level?</h1>
+            <p class="subtitle">Choose the one that best describes where you are.</p>
+
+            <div class="options-grid">
+
+                <label class="option-card">
+                    <input type="radio" name="experienceLevel" value="entry" />
+                    <div class="option-content">
+                        <div class="option-icon">🌿</div>
+                        <div class="option-text">
+                            <h3>Entry Level</h3>
+                            <p>0–2 years</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="option-card">
+                    <input type="radio" name="experienceLevel" value="mid" />
+                    <div class="option-content">
+                        <div class="option-icon">🌱</div>
+                        <div class="option-text">
+                            <h3>Mid Level</h3>
+                            <p>3–5 years</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="option-card">
+                    <input type="radio" name="experienceLevel" value="senior" />
+                    <div class="option-content">
+                        <div class="option-icon">🌳</div>
+                        <div class="option-text">
+                            <h3>Senior Level</h3>
+                            <p>6–10 years</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="option-card">
+                    <input type="radio" name="experienceLevel" value="executive" />
+                    <div class="option-content">
+                        <div class="option-icon">🏔️</div>
+                        <div class="option-text">
+                            <h3>Executive</h3>
+                            <p>10+ years</p>
+                        </div>
+                    </div>
+                </label>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- BOTTOM NAV -->
+    <footer class="bottom-nav">
+        <a class="btn-back" href="index2-1.html">← Back</a>
+
+        <button class="btn-continue" id="continueBtn">
+            Continue <span aria-hidden="true">→</span>
+        </button>
+    </footer>
+
+    <script src="app-state.js"></script>
+    <script>
+        document.getElementById("continueBtn").addEventListener("click", () => {
+            const selected = document.querySelector('input[name="experienceLevel"]:checked');
+            if (!selected) {
+                alert("Please select one option.");
+                return;
+            }
+            updateProfileField("experienceLevel", selected.value);
+            window.location.href = "index2-3.html";
+        });
+    </script>
+
+</body>
+
+</html>

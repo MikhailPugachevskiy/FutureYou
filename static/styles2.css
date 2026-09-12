@@ -1,0 +1,319 @@
+/* =========================
+   STEP 2 (Q1–Q7)
+========================= */
+
+:root {
+    --bg: #f7f8fc;
+    --text: #111827;
+    --muted: #6b7280;
+
+    --border: #e5e7eb;
+    --border-soft: #eef0f4;
+
+    --purple-1: #6c63ff;
+    --purple-2: #8b84ff;
+
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   TOP NAV (Logo)
+========================= */
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
+    color: var(--white);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.logo-text {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-section {
+    width: min(780px, 72%);
+    margin: 10px auto 0 auto;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--purple-1), var(--purple-2));
+    border-radius: 999px;
+}
+
+/* =========================
+   MAIN QUESTION AREA
+========================= */
+
+.question-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.question-inner {
+    width: min(820px, 90%);
+}
+
+.question-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 26px;
+}
+
+/* =========================
+   TEXT INPUT (Q1/Q7)
+========================= */
+
+.text-input {
+    width: 100%;
+    max-width: 720px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    font-size: 15px;
+    outline: none;
+    background: var(--white);
+}
+
+.text-input:focus {
+    border-color: var(--purple-1);
+}
+
+/* =========================
+   OPTION CARDS GRID (Q2/Q5/Q6)
+========================= */
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 720px;
+}
+
+.option-card {
+    display: block;
+    cursor: pointer;
+}
+
+.option-card input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.option-content {
+    background: var(--white);
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    transition: 0.18s ease;
+}
+
+.option-card:hover .option-content {
+    transform: translateY(-1px);
+    border-color: #d9dbe2;
+    box-shadow: 0 6px 14px rgba(17, 24, 39, 0.06);
+}
+
+.option-card input:checked+.option-content {
+    border-color: rgba(108, 99, 255, 0.55);
+    box-shadow: 0 10px 22px rgba(108, 99, 255, 0.14);
+}
+
+.option-icon {
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+}
+
+.option-text h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.option-text p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* =========================
+   PILLS (Q3/Q4)
+========================= */
+
+.pill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+    max-width: 720px;
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: var(--white);
+    border: 1px solid var(--border-soft);
+    color: #374151;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.18s ease;
+}
+
+.pill:hover {
+    box-shadow: 0 6px 14px rgba(17, 24, 39, 0.06);
+    transform: translateY(-1px);
+}
+
+.pill.selected {
+    border-color: rgba(108, 99, 255, 0.55);
+    box-shadow: 0 10px 22px rgba(108, 99, 255, 0.14);
+}
+
+.pill .pill-ico {
+    width: 18px;
+    text-align: center;
+}
+
+/* =========================
+   BOTTOM NAV
+========================= */
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 60px;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: #9ca3af;
+    text-decoration: none;
+}
+
+.btn-back.disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.btn-continue {
+    border: none;
+    padding: 14px 30px;
+    border-radius: 12px;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-continue:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(108, 99, 255, 0.25);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    .progress-section {
+        width: 86%;
+    }
+
+    .question-title {
+        font-size: 28px;
+    }
+
+    .options-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom-nav {
+        padding: 20px 30px;
+    }
+}

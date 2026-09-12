@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureYou | Profile Question 1</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles2-1.css">
+</head>
+
+
+<body>
+
+    <!-- HEADER / NAV -->
+    <header class="top-nav">
+        <div class="logo-area">
+            <div class="logo-icon">✦</div>
+            <span class="logo-text">FutureYou</span>
+        </div>
+    </header>
+
+
+    <!-- PROGRESS BAR -->
+    <section class="progress-section">
+
+        <div class="progress-info">
+            <span class="question-count">Question 1 of 7</span>
+            <span class="progress-percent">14%</span>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+    </section>
+
+
+    <!-- MAIN QUESTION -->
+    <main class="question-container">
+
+        <h1>What's your current role?</h1>
+
+        <p class="subtitle">
+            Or the most recent role you've held.
+        </p>
+
+        <!-- INPUT FIELD -->
+        <div class="input-group">
+
+            <input type="text" id="currentRole" name="currentRole"
+                placeholder="e.g. Marketing Manager, Software Engineer, Teacher...">
+
+        </div>
+
+    </main>
+
+
+    <!-- BOTTOM NAVIGATION -->
+    <footer class="bottom-nav">
+
+        <button class="btn-back" disabled>
+            ← Back
+        </button>
+
+        <button class="btn-continue" id="continueBtn">
+            Continue →
+        </button>
+
+    </footer>
+    <script src="app-state.js"></script>
+    <script>
+        document.getElementById("continueBtn").addEventListener("click", () => {
+            const role = document.getElementById("currentRole").value.trim();
+
+            if (!role) {
+                alert("Please enter your current role.");
+                return;
+            }
+
+            updateProfileField("currentRole", role);
+            window.location.href = "index2-2.html";
+        });
+    </script>
+
+</body>
+
+</html>
