@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureYou | Skill Analysis</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles5.css" />
+</head>
+
+<body>
+
+    <!-- TOP NAV -->
+    <header class="top-nav">
+        <div class="logo-area">
+            <div class="logo-icon">✦</div>
+            <span class="logo-text">FutureYou</span>
+        </div>
+    </header>
+
+    <main class="skills-page">
+
+        <!-- HERO -->
+        <section class="skills-hero">
+            <span class="badge">Skill Analysis</span>
+
+            <h1>Your skill match &amp; gaps</h1>
+            <p>For your transition to <strong id="target-role">Design Director</strong></p>
+        </section>
+
+        <!-- TWO COLUMNS -->
+        <section class="skills-grid">
+
+            <!-- LEFT: Skills you already have -->
+            <div class="skills-col">
+
+                <div class="col-title">
+                    <span class="col-ico ok">✓</span>
+                    <h2>Skills you already have</h2>
+                </div>
+
+                <div class="skill-list" id="skills-have-list">
+
+                    <div class="skill-row">
+                        <div class="skill-left">
+                            <span class="row-ico ok">✓</span>
+                            <div>
+                                <h3>Creative Thinking</h3>
+                            </div>
+                        </div>
+                        <span class="tag strong">strong</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <div class="skill-left">
+                            <span class="row-ico ok">✓</span>
+                            <div>
+                                <h3>Problem Solving</h3>
+                            </div>
+                        </div>
+                        <span class="tag strong">strong</span>
+                    </div>
+
+                    <div class="skill-row highlight">
+                        <div class="skill-left">
+                            <span class="row-ico ok">✓</span>
+                            <div>
+                                <h3>Mentorship</h3>
+                            </div>
+                        </div>
+                        <span class="tag strong">strong</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <div class="skill-left">
+                            <span class="row-ico ok">✓</span>
+                            <div>
+                                <h3>Project Management</h3>
+                            </div>
+                        </div>
+                        <span class="tag moderate">moderate</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <div class="skill-left">
+                            <span class="row-ico ok">✓</span>
+                            <div>
+                                <h3>Visual Communication</h3>
+                            </div>
+                        </div>
+                        <span class="tag strong">strong</span>
+                    </div>
+
+                    <div class="skill-row">
+                        <div class="skill-left">
+                            <span class="row-ico ok">✓</span>
+                            <div>
+                                <h3>Collaboration</h3>
+                            </div>
+                        </div>
+                        <span class="tag strong">strong</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT: Skills to build next -->
+            <div class="skills-col">
+
+                <div class="col-title">
+                    <span class="col-ico up">↗</span>
+                    <h2>Skills to build next</h2>
+                </div>
+
+                <div class="skill-list" id="skills-build-list">
+
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <div class="skill-card-title">
+                                <span class="row-ico up">↗</span>
+                                <h3>Strategic Planning</h3>
+                            </div>
+                            <span class="tag high">high priority</span>
+                        </div>
+                        <p>Develop a long-term vision for design projects, aligning them with business objectives.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <div class="skill-card-title">
+                                <span class="row-ico up">↗</span>
+                                <h3>Leadership</h3>
+                            </div>
+                            <span class="tag high">high priority</span>
+                        </div>
+                        <p>Cultivate skills to inspire and lead a diverse design team effectively.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <div class="skill-card-title">
+                                <span class="row-ico up">↗</span>
+                                <h3>Budget Management</h3>
+                            </div>
+                            <span class="tag medium">medium priority</span>
+                        </div>
+                        <p>Learn how to create and manage budgets for design projects.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <div class="skill-card-title">
+                                <span class="row-ico up">↗</span>
+                                <h3>Client Management</h3>
+                            </div>
+                            <span class="tag medium">medium priority</span>
+                        </div>
+                        <p>Build strong relationships with clients, understanding their needs and delivering effective
+                            design solutions.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-top">
+                            <div class="skill-card-title">
+                                <span class="row-ico up">↗</span>
+                                <h3>UX/UI Design Principles</h3>
+                            </div>
+                            <span class="tag low">low priority</span>
+                        </div>
+                        <p>Deepen understanding of user experience and interface design to lead comprehensive design
+                            strategies.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- CTA -->
+        <section class="skills-cta">
+            <button class="btn-cta" id="toRoadmapBtn">
+                Generate Roadmap <span aria-hidden="true">→</span>
+            </button>
+        </section>
+
+    </main>
+
+    <script src="app-state.js"></script>
+    <script src="skills.js"></script>
+    <script>
+        document.getElementById("toRoadmapBtn").addEventListener("click", () => {
+            window.location.href = "index6.html";
+        });
+    </script>
+</body>
+
+</html>
