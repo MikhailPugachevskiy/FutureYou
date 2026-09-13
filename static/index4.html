@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureYou | Career Matches</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles4.css" />
+</head>
+
+<body>
+
+    <!-- TOP NAV -->
+    <header class="top-nav">
+        <div class="logo-area">
+            <div class="logo-icon">✦</div>
+            <span class="logo-text">FutureYou</span>
+        </div>
+    </header>
+
+    <main class="matches-page">
+
+        <!-- HERO -->
+        <section class="matches-hero">
+            <span class="badge badge-green">Career Matches</span>
+
+            <h1>Your best career paths</h1>
+            <p>Based on your strengths, values, and experience.</p>
+        </section>
+
+        <!-- MATCH CARDS -->
+        <section class="matches-grid">
+
+            <!-- MATCH #1 -->
+            <article class="match-card">
+
+                <div class="match-top">
+                    <div>
+                        <div class="match-label">MATCH #1</div>
+                        <h2 class="match-title" id="match1-title">Design Director</h2>
+                    </div>
+
+                    <div class="match-number">1</div>
+                </div>
+
+                <p class="match-desc" id="match1-desc">
+                    As a Design Director, you will oversee the design team and guide the creative direction
+                    of projects. You will develop innovative concepts and solutions while ensuring alignment
+                    with the client&apos;s vision and business goals. This role emphasizes leadership and mentoring,
+                    making it ideal for someone with experience in mentoring and a strong creative background.
+                </p>
+
+                <div class="match-divider"></div>
+
+                <h3 class="section-title">Why it fits you</h3>
+                <ul class="check-list" id="match1-why">
+                    <li><span class="check">✓</span>Leverages your strong leadership and mentoring skills to develop and
+                        guide a team of designers.</li>
+                    <li><span class="check">✓</span>Allows for creative problem-solving on a larger scale, contributing
+                        to significant projects.</li>
+                    <li><span class="check">✓</span>Offers professional growth opportunities by leading innovative
+                        design initiatives and collaborating with diverse teams.</li>
+                </ul>
+
+                <h3 class="section-title">Skills overlap</h3>
+                <div class="skills-wrap" id="match1-skills">
+                    <button class="skill-pill" type="button">Creative thinking</button>
+                    <button class="skill-pill" type="button">Problem-solving</button>
+                    <button class="skill-pill" type="button">Mentorship</button>
+                </div>
+
+            </article>
+
+            <!-- MATCH #2 -->
+            <article class="match-card">
+
+                <div class="match-top">
+                    <div>
+                        <div class="match-label">MATCH #2</div>
+                        <h2 class="match-title" id="match2-title">Experiential Designer</h2>
+                    </div>
+
+                    <div class="match-number">2</div>
+                </div>
+
+                <p class="match-desc" id="match2-desc">
+                    In this role, you will design and create immersive environments that engage users and enhance brand
+                    experiences. This position involves a mix of creative work and problem-solving, focusing on
+                    innovative
+                    design strategies to create impactful user experiences. Your background in graphic design and
+                    passion
+                    for creativity will be crucial in crafting these unique experiences.
+                </p>
+
+                <div class="match-divider"></div>
+
+                <h3 class="section-title">Why it fits you</h3>
+                <ul class="check-list" id="match2-why">
+                    <li><span class="check">✓</span>Combines your love for creativity with real-world problem-solving in
+                        engaging environments.</li>
+                    <li><span class="check">✓</span>Encourages professional growth through the exploration of new
+                        mediums and technologies in design.</li>
+                    <li><span class="check">✓</span>Provides an opportunity to teach and mentor others in experiential
+                        design techniques.</li>
+                </ul>
+
+                <h3 class="section-title">Skills overlap</h3>
+                <div class="skills-wrap" id="match2-skills">
+                    <button class="skill-pill" type="button">Creative thinking</button>
+                    <button class="skill-pill" type="button">Excellent problem-solving skills</button>
+                    <button class="skill-pill" type="button">Collaboration</button>
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- CTA -->
+        <section class="matches-cta">
+            <button class="btn-cta" id="toSkillsBtn">
+                See skill gap <span aria-hidden="true">→</span>
+            </button>
+        </section>
+
+    </main>
+
+    <script src="app-state.js"></script>
+    <script src="matches.js"></script>
+    <script>
+        document.getElementById("toSkillsBtn").addEventListener("click", () => {
+            window.location.href = "index5.html";
+        });
+    </script>
+</body>
+
+</html>
