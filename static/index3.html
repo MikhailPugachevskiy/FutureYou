@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureYou | Profile Snapshot</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles3.css" />
+</head>
+
+<body>
+
+    <!-- TOP NAV -->
+    <header class="top-nav">
+        <div class="logo-area">
+            <div class="logo-icon">✦</div>
+            <span class="logo-text">FutureYou</span>
+        </div>
+    </header>
+
+    <!-- HEADER -->
+    <main class="snapshot-page">
+
+        <section class="snapshot-hero">
+            <span class="badge">Profile Snapshot</span>
+
+            <h1>Here's what we understood about you</h1>
+            <p>Review your profile and continue when ready.</p>
+        </section>
+
+        <!-- CARDS -->
+        <section class="snapshot-grid">
+
+            <!-- Card 1 -->
+            <article class="snapshot-card card-blue">
+                <div class="card-title">
+                    <span class="card-icon blue">📘</span>
+                    <h3>Experience Summary</h3>
+                </div>
+
+                <ul class="card-list" id="experience-summary">
+                    <li>Over 5 years of experience as a senior graphic designer focusing on creative problem-solving
+                        techniques.</li>
+                    <li>Extensive background in developing visual concepts and executing design projects from ideation
+                        to completion.</li>
+                    <li>Skilled in teaching design principles to junior designers, fostering a collaborative learning
+                        environment.</li>
+                    <li>Proven track record of successfully implementing design solutions that enhance user engagement
+                        and brand identity.</li>
+                </ul>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="snapshot-card card-purple">
+                <div class="card-title">
+                    <span class="card-icon purple">⚡</span>
+                    <h3>Strength Signals</h3>
+                </div>
+
+                <ul class="card-list" id="strength-signals">
+                    <li>Strong aptitude for creative thinking, leading to innovative design solutions.</li>
+                    <li>Excellent problem-solving skills, enabling the effective resolution of design challenges.</li>
+                    <li>Experience in mentoring, indicating leadership qualities and a commitment to team development.
+                    </li>
+                    <li>Able to thrive in hands-on design roles that require collaboration and immediate feedback.</li>
+                </ul>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="snapshot-card card-green">
+                <div class="card-title">
+                    <span class="card-icon green">⚙️</span>
+                    <h3>Work Preferences</h3>
+                </div>
+
+                <ul class="card-list" id="work-preferences">
+                    <li>Prefers an onsite work environment to foster interaction and collaborative creativity.</li>
+                    <li>Enjoys dynamic work that changes frequently, avoiding repetitive tasks.</li>
+                    <li>Thrives in situations that promote open communication and transparency, avoiding political
+                        environments.</li>
+                </ul>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="snapshot-card card-red">
+                <div class="card-title">
+                    <span class="card-icon red">❤️</span>
+                    <h3>Career Values</h3>
+                </div>
+
+                <ul class="card-list" id="career-values">
+                    <li>Values professional growth through challenging projects and learning opportunities.</li>
+                    <li>Prioritizes creativity and innovation, seeking roles that allow artistic expression.</li>
+                    <li>Believes in the importance of mentorship and sharing knowledge, contributing to the development
+                        of others in the field.</li>
+                </ul>
+            </article>
+
+        </section>
+
+        <!-- CTA -->
+        <section class="snapshot-cta">
+            <button class="btn-cta" id="toMatchesBtn">
+                Show my best career match <span aria-hidden="true">→</span>
+            </button>
+        </section>
+
+    </main>
+
+    <script>
+        document.getElementById("toMatchesBtn").addEventListener("click", () => {
+            window.location.href = "index4.html";
+        });
+    </script>
+    <script src="app-state.js"></script>
+    <script>
+        const state = getAppState();
+        const profile = state.profile;
+
+        const experienceTextMap = {
+            entry: "You are at the beginning of your professional journey and building your foundation.",
+            mid: "You already have meaningful professional experience and are ready for the next step.",
+            senior: "You bring advanced experience and can contribute with confidence and depth.",
+            executive: "You operate at a highly experienced level and are well positioned for strategic roles."
+        };
+
+        const experienceSummary =
+            experienceTextMap[profile.experienceLevel] ||
+            "You bring a unique mix of experience and growth potential.";
+
+        const strengthSignals = [
+            ...profile.enjoyTasks.slice(0, 2),
+            profile.currentRole ? `Experience in ${profile.currentRole}` : null
+        ].filter(Boolean);
+
+        const workPreferences = [
+            profile.workStyle || "Flexible work style",
+            profile.drainTasks.length ? `Avoids: ${profile.drainTasks[0]}` : null
+        ].filter(Boolean);
+
+        const careerValues = [
+            profile.motivation || "Professional growth",
+            profile.careerConcern ? "Looking for clarity and direction" : null
+        ].filter(Boolean);
+
+        updateSection("snapshot", {
+            experienceSummary,
+            strengthSignals,
+            workPreferences,
+            careerValues
+        });
+
+        const updatedState = getAppState();
+
+        document.getElementById("experience-summary").innerHTML =
+            `<li>${updatedState.snapshot.experienceSummary}</li>`;
+
+        document.getElementById("strength-signals").innerHTML =
+            updatedState.snapshot.strengthSignals.map(item => `<li>${item}</li>`).join("");
+
+        document.getElementById("work-preferences").innerHTML =
+            updatedState.snapshot.workPreferences.map(item => `<li>${item}</li>`).join("");
+
+        document.getElementById("career-values").innerHTML =
+            updatedState.snapshot.careerValues.map(item => `<li>${item}</li>`).join("");
+    </script>
+</body>
+
+</html>
