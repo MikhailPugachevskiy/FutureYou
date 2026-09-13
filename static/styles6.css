@@ -1,0 +1,242 @@
+/* =========================
+  STEP 6 (Learning Roadmap)
+========================= */
+
+:root {
+    --bg: #f7f8fc;
+    --text: #111827;
+    --muted: #6b7280;
+
+    --purple-1: #6c63ff;
+    --purple-2: #8b84ff;
+
+    --white: #ffffff;
+    --border: #e5e7eb;
+    --border-soft: #eef0f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* =========================
+   TOP NAV (same as Step 2/3/4/5)
+========================= */
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
+    color: var(--white);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.logo-text {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+
+.roadmap-page {
+    width: min(1000px, 92%);
+    margin: 0 auto;
+    padding: 40px 0 70px;
+    text-align: center;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #4f46e5;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid #e6e9ff;
+    margin-bottom: 18px;
+}
+
+.roadmap-hero h1 {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.roadmap-actions {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 14px;
+    margin-bottom: 26px;
+}
+
+/* Primary */
+.btn-primary {
+    border: none;
+    padding: 16px 26px;
+    border-radius: 14px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
+    box-shadow: 0 14px 26px rgba(108, 99, 255, 0.25);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 34px rgba(108, 99, 255, 0.28);
+}
+
+/* Secondary */
+.btn-secondary {
+    padding: 16px 26px;
+    border-radius: 14px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    color: #111827;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    box-shadow: 0 8px 18px rgba(17, 24, 39, 0.04);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 22px rgba(17, 24, 39, 0.06);
+}
+
+/* icons inside buttons */
+.btn-ico {
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* =========================
+   HINT TEXT
+========================= */
+
+.hint {
+    font-size: 14px;
+    color: #9ca3af;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 720px) {
+    .roadmap-hero h1 {
+        font-size: 38px;
+    }
+
+    .roadmap-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: min(420px, 100%);
+        margin: 0 auto;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .top-nav {
+        padding: 18px 20px;
+    }
+}
+
+/* =========================
+   ROADMAP CONTENT
+========================= */
+
+.roadmap-content {
+    width: min(820px, 100%);
+    margin: 28px auto 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+.roadmap-step {
+    background: var(--white);
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 10px 22px rgba(17, 24, 39, 0.03);
+}
+
+.roadmap-step h3 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.roadmap-step p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+}

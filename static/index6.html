@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutureYou | Learning Roadmap</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles6.css" />
+</head>
+
+<body>
+
+    <!-- TOP NAV -->
+    <header class="top-nav">
+        <div class="logo-area">
+            <div class="logo-icon">✦</div>
+            <span class="logo-text">FutureYou</span>
+        </div>
+    </header>
+
+    <main class="roadmap-page">
+
+        <section class="roadmap-hero">
+            <span class="badge">Learning Roadmap</span>
+
+            <h1>Your path to <span id="roadmap-role">your next role</span></h1>
+            <p class="subtitle" id="roadmap-subtitle">A week-by-week plan to close your skill gaps.</p>
+        </section>
+
+        <section class="roadmap-content" id="roadmap-content"></section>
+
+        <section class="roadmap-actions">
+
+            <button class="btn-primary" id="savePlanBtn" type="button">
+                <span class="btn-ico">🔖</span>
+                Save my plan
+            </button>
+
+            <button class="btn-secondary" id="downloadPdfBtn" type="button">
+                <span class="btn-ico">⬇️</span>
+                Download PDF
+            </button>
+
+        </section>
+
+        <p class="hint">
+            This roadmap is personalized to your profile. Adjust the pace to fit your schedule.
+        </p>
+
+    </main>
+
+    <script src="app-state.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="roadmap.js"></script>
+
+</body>
+
+</html>
