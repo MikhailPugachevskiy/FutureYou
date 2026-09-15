@@ -1,0 +1,560 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f8fc;
+    margin: 0;
+    padding: 40px;
+}
+
+.app {
+    max-width: 900px;
+    margin: auto;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+.matches-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.match-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.match-card.active {
+    border-color: #6c63ff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.badge {
+    font-size: 12px;
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.skills {
+    margin-top: 12px;
+}
+
+.skill-pill {
+    display: inline-block;
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 4px 10px;
+    margin: 4px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.react-section {
+    margin-bottom: 60px;
+}
+
+.skill-analysis-section {
+    margin-top: 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.skills-grid-react {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 30px;
+}
+
+.skills-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.column-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.column-title h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.column-icon,
+.row-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.column-icon.success,
+.row-icon.success {
+    background: #eafff2;
+    color: #15803d;
+    border: 1px solid #c6f3d6;
+}
+
+.column-icon.accent,
+.row-icon.accent {
+    background: #eef2ff;
+    color: #4f46e5;
+    border: 1px solid #e6e9ff;
+}
+
+.skill-list-react {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.skill-row-react,
+.skill-card-react {
+    background: white;
+    border: 1px solid #eef0f4;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 10px 22px rgba(17, 24, 39, 0.03);
+}
+
+.skill-row-react {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+}
+
+.skill-left-react {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.skill-left-react h3,
+.skill-card-title-react h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.skill-card-top-react {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.skill-card-title-react {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-card-react p {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+.tag-react {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.tag-react.strong {
+    background: #eafff2;
+    color: #15803d;
+    border-color: #c6f3d6;
+}
+
+.tag-react.moderate {
+    background: #eef2ff;
+    color: #2563eb;
+    border-color: #dbe6ff;
+}
+
+.tag-react.high {
+    background: #ffecec;
+    color: #dc2626;
+    border-color: #ffd2d2;
+}
+
+.tag-react.medium {
+    background: #fff2d6;
+    color: #b45309;
+    border-color: #ffe3ab;
+}
+
+.tag-react.low {
+    background: #f3f4f6;
+    color: #6b7280;
+    border-color: #e5e7eb;
+}
+
+@media (max-width: 900px) {
+    .skills-grid-react {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header h1 {
+        font-size: 32px;
+    }
+}
+
+.snapshot-hero-react {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.snapshot-badge-react {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: rgba(110, 103, 255, 0.08);
+    color: #5b5ce9;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+.snapshot-hero-react h1 {
+    font-size: 56px;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin: 0 0 16px;
+    color: #121a2f;
+}
+
+.snapshot-hero-react .subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #6f7787;
+    margin: 0;
+}
+
+.snapshot-grid-react {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 28px;
+    margin-top: 10px;
+}
+
+.snapshot-card-react {
+    background: #ffffff;
+    border: 1px solid #ececf4;
+    border-radius: 28px;
+    padding: 28px 28px 24px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.04);
+}
+
+.snapshot-card-title-react {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.snapshot-card-title-react h3 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #1c2434;
+}
+
+.snapshot-card-icon-react {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.snapshot-card-icon-react.blue {
+    background: rgba(96, 126, 255, 0.10);
+    color: #607eff;
+}
+
+.snapshot-card-icon-react.purple {
+    background: rgba(134, 85, 255, 0.10);
+    color: #8655ff;
+}
+
+.snapshot-card-icon-react.green {
+    background: rgba(60, 179, 113, 0.12);
+    color: #3cb371;
+}
+
+.snapshot-card-icon-react.red {
+    background: rgba(255, 88, 88, 0.10);
+    color: #e45b5b;
+}
+
+.snapshot-card-list-react {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.snapshot-card-list-react li {
+    margin-bottom: 14px;
+    color: #596273;
+    line-height: 1.7;
+}
+
+.snapshot-card-list-react li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .snapshot-grid-react {
+        grid-template-columns: 1fr;
+    }
+
+    .snapshot-hero-react h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .snapshot-hero-react h1 {
+        font-size: 34px;
+    }
+
+    .snapshot-hero-react .subtitle {
+        font-size: 16px;
+    }
+
+    .snapshot-card-react {
+        padding: 22px 20px;
+        border-radius: 22px;
+    }
+}
+
+.roadmap-react-section {
+    width: 100%;
+}
+
+.roadmap-hero-react {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.roadmap-hero-react .badge {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #5b5ce2;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.roadmap-hero-react h1 {
+    margin: 0 0 14px;
+    font-size: 48px;
+    line-height: 1.1;
+    color: #111827;
+}
+
+.roadmap-hero-react h1 span {
+    color: #5b5ce2;
+}
+
+.roadmap-hero-react .subtitle {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #6b7280;
+}
+
+.roadmap-list-react {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.roadmap-item-react {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.05);
+}
+
+.roadmap-item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.roadmap-week {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #f5f3ff;
+    color: #6d28d9;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.roadmap-priority {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.roadmap-priority.high {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.roadmap-priority.medium {
+    background: #fffbeb;
+    color: #d97706;
+}
+
+.roadmap-priority.low {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.roadmap-item-react h3 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    color: #111827;
+}
+
+.roadmap-item-react p {
+    margin: 0 0 18px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #6b7280;
+}
+
+.roadmap-action-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: #f9fafb;
+    border: 1px solid #eceff3;
+}
+
+.roadmap-action-box strong {
+    font-size: 15px;
+    color: #111827;
+}
+
+.roadmap-action-box span {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4b5563;
+}
+
+.roadmap-actions-react {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.btn-primary,
+.btn-secondary {
+    border: none;
+    border-radius: 18px;
+    padding: 16px 28px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #5b5ce2, #7c3aed);
+    color: white;
+    box-shadow: 0 12px 24px rgba(91, 92, 226, 0.22);
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 10px 20px rgba(17, 24, 39, 0.06);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-1px);
+}
+
+.roadmap-hint-react {
+    text-align: center;
+    font-size: 16px;
+    color: #9ca3af;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .roadmap-hero-react h1 {
+        font-size: 34px;
+    }
+
+    .roadmap-hero-react .subtitle {
+        font-size: 18px;
+    }
+
+    .roadmap-item-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .roadmap-item-react h3 {
+        font-size: 24px;
+    }
+
+    .roadmap-item-react p {
+        font-size: 16px;
+    }
+}
